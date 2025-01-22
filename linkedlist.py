@@ -7,17 +7,17 @@ class list:
     def __init__(self,first):
         self.first = first
     def Addfirst(self,data):
-        if self.first == None:
+        if self.first is None:
             newnode = node(data,None)
             self.first = newnode
-        elif self.first != None:
+        elif self.first is not None:
             newnode = node(data)
             newnode.addr = self.first
             self.first = newnode
     def AddLast(self,data):
         itr = self.first
         while True:
-            if itr.addr != None:
+            if itr.addr is not None:
                 itr = itr.addr
             else:
                 break
@@ -26,7 +26,7 @@ class list:
     def Size(self):
         itr = self.first
         lenght = 1
-        while itr.addr != None:
+        while itr.addr is not None:
             itr = itr.addr
             lenght += 1
         return lenght
