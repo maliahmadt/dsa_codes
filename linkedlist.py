@@ -23,7 +23,15 @@ class list:
                 break
         newnode = node(data)
         itr.addr = newnode
-        
+    def Size(self):
+        itr = self.first
+        lenght = 1
+        while itr.addr != None:
+            itr = itr.addr
+            lenght += 1
+        return lenght
+    def GetFirst(self):
+        return self.first.data
         
         
 L = list(None)
@@ -31,3 +39,4 @@ L.Addfirst(2)
 L.Addfirst(1)
 L.AddLast(3)
 L.AddLast(4)
+print(L.GetFirst())
